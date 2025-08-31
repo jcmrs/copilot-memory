@@ -1,25 +1,33 @@
 # Copilot Memory
 
-## Purpose
-Copilot Memory is a modular, persistent workspace designed for collaborative AI research, project management, and feature development. This repository serves as a central hub for organizing projects, sharing information, and enhancing productivity in AI-related initiatives.
+Welcome to the **Copilot Memory** project—a living document and codebase designed to grow and adapt over time.
 
-## Folder Structure
-- `/conversations` — Individual, versioned conversations with metadata
-- `/indexes` — Cross-conversation indexes (features, decisions, summaries)
-- `/modules` — Feature/function documentation & design
-- `/tasks` — Project tasks and action items
-- `/instructions` — Custom instructions, guardrails, handoff templates
+## Vision
 
-## Workflow
-1. Start a conversation: add a file to `/conversations/`
-2. Log decisions/features: update `/indexes/`
-3. Develop features/modules: document in `/modules/`
-4. Track actionable items in `/tasks/`
-5. Update instructions and guardrails in `/instructions/`
-6. Maintain indexes for continuity and cross-referencing
+- **Living Project:** The structure, features, and documentation evolve alongside usage and feedback.
+- **Collaboration-first:** Designed for human-AI and cross-team collaboration.
+- **Extensible:** Future support for GitHub Pages, Wiki, and cross-AI information exchange.
+- **Data-centric:** JSON and open formats for maximum interoperability.
 
-## Extensibility
-The architecture is modular—add new folders or files as your project evolves.
+## Structure
 
-## Date Format
-All logs and metadata use EU format: `dd-mm-yyyy`
+- `indexes/` – Indexing strategies and data tracking.
+- `modules/` – Functional code modules.
+- `tasks/` – Project tasks, workflows, and automation.
+- `docs/` – Extended documentation.
+
+See [`ROADMAP.md`](ROADMAP.md) for project ideas and future features.
+
+---
+
+## Get Started
+
+1. Clone the repo
+2. Explore the folders
+3. Contribute via issues, PRs, or discussions
+
+---
+
+## License
+
+[MIT](LICENSE)
