@@ -1,33 +1,14 @@
-# Copilot Memory
+# copilot-memory
 
-Welcome to the **Copilot Memory** project—a living document and codebase designed to grow and adapt over time.
+A modular, persistent memory repository to support AI-assisted project work.  
+Records conversations, decisions, indexes, instructions, and lessons learned for continuity and handoffs.
 
-## Vision
+## Folder Structure
 
-- **Living Project:** The structure, features, and documentation evolve alongside usage and feedback.
-- **Collaboration-first:** Designed for human-AI and cross-team collaboration.
-- **Extensible:** Future support for GitHub Pages, Wiki, and cross-AI information exchange.
-- **Data-centric:** JSON and open formats for maximum interoperability.
+- `conversations/` — Conversation logs and summaries.
+- `indexes/` — Cross-conversation indexes for searching and linking.
+- `modules/` — Extensible features, behaviors, or memory modules.
+- `tasks/` — Task-specific files and workflow documentation.
+- `instructions/` — Instructions, guardrails, handoff templates.
 
-## Structure
-
-- `indexes/` – Indexing strategies and data tracking.
-- `modules/` – Functional code modules.
-- `tasks/` – Project tasks, workflows, and automation.
-- `docs/` – Extended documentation.
-
-See [`ROADMAP.md`](ROADMAP.md) for project ideas and future features.
-
----
-
-## Get Started
-
-1. Clone the repo
-2. Explore the folders
-3. Contribute via issues, PRs, or discussions
-
----
-
-## License
-
-[MIT](LICENSE)
+_All metadata/logs use EU date format (dd-mm-yyyy) as standard._
