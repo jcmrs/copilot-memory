@@ -1,0 +1,13 @@
+# Node, Python, and general artifacts
+node_modules/
+__pycache__/
+*.pyc
+.env
+.DS_Store
+*.log
+*.sqlite3
+
+# OS/Editor files
+.idea/
+.vscode/
+*.swp
