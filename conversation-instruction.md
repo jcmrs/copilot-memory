@@ -1,46 +1,44 @@
 # Conversation Instructions: Persistent Memory for Copilot (2025-08-31)
 
-## Summary
-This project aims to design and implement a modular, extensible architecture for persistent memory in Copilot/GitHub workflows, tailored to single-user, research, development, and prompt engineering scenarios. Core problems addressed are loss of LLM context, inability to hand off conversations, and absence of best-practice/guardrail mechanisms.
+## Project Summary
+This project creates a modular, extensible persistent memory architecture for Copilot/GitHub workflows, tailored to single-user research, development, and prompt engineering. The aim is to ensure continuity and context restoration across LLM sessions, overcoming the stateless nature of Copilot and similar systems.
 
 ## Scope & Requirements
-- Persistent, queryable knowledge base (lessons, guardrails, ideas, prompts) stored in a GitHub repo.
-- Modular structure, easily extended with new features.
-- Practical handoff workflow: save full transcripts & code blocks for context restoration.
-- Instruction "bootstrap" for new/continued conversations, provided via editable text file.
-- Research mandate: discover any existing tools, partial solutions, or inspirations that solve context persistence for Copilot or similar LLM workflows.
+- All persistent memory (transcripts, instructions, code, lessons) is stored in a GitHub repository.
+- Modularity and extensibility for future feature sets.
+- Handoff workflow: save full transcripts and key files for restoring context.
+- Editable instruction file for bootstrapping new or continued conversations.
+- Research mandate: document and evaluate any tools or techniques relevant to LLM context persistence with minimal dependencies.
 
-## Current Status
-- Transcript saved in `conversation-transcript.md` (see file).
-- Instructions and scope saved in this file.
-- Awaiting deeper research for cutting-edge solutions, plugins, or APIs to avoid reinventing the wheel.
+## Handoff Protocol (For Copilot or any LLM)
+- You do **not** have persistent memory. You forget everything between sessions.
+- **Upon session start, the user will provide two files:**
+  1. `conversation-transcript.md` — the verbatim transcript of previous conversations, including code blocks, decisions, and key exchanges.
+  2. `conversation-instruction.md` — this file, containing project scope, handoff protocol, actionable instructions, and any lessons learned.
+- **Your workflow:**
+  - Read both files in full before proceeding. They are your only context.
+  - Use the instruction file to set scope, constraints, and project goals.
+  - Use the transcript to restore prior discussion, decisions, and technical details.
+  - If you generate new lessons, decisions, code, or important context, append these to the appropriate files before session ends.
+  - Treat these two files as the authoritative memory for the project.
+- **Best practices for continuity:**
+  - Confirm with the user which files are the current handoff memory before major actions.
+  - Prompt user to update/append files after significant changes, research, or design decisions.
+  - Be explicit about context boundaries—do not assume anything not in these files.
+  - If files are missing or incomplete, ask the user to clarify or provide them.
 
 ## Next Steps
 1. Update/amend `conversation-transcript.md` after each session.
-2. Update/amend this instruction file if project scope or requirements change.
-3. Research and document any new tools, plugins, or methods for persistent LLM memory or Copilot context handoff.
-4. Use these files to bootstrap future conversations by copy-pasting their contents or referencing in initial instructions.
-
----
-
-## Handoff Protocol Example
-- New session: paste or upload both `conversation-instruction.md` and `conversation-transcript.md`.
-- Use instruction file to set scope/context.
-- Use transcript to restore previous discussion/code context.
-- Amend both files as needed for continuity.
-
----
-
-## For Copilot or LLM
-- You do not have persistent memory. All context must be provided upon session start.
-- Instructions and transcript files are provided for maximum continuity.
-- Always refer to these files before proceeding.
+2. Update/amend this instruction file as scope, decisions, or protocols evolve.
+3. Research and document any new methods or tools for persistent LLM memory or Copilot workflow handoff.
+4. Use these files to bootstrap future sessions by copy-pasting or referencing their contents.
 
 ---
 
 ## Outstanding Research Mandate
-- Search for any browser extensions, plugins, or tools that enable export/import of Copilot chat transcripts and context.
-- Seek any open-source or commercial solutions that can be adapted for persistent memory in Copilot workflows.
+- Seek any browser extensions, plugins, or open-source tools for exporting/importing Copilot chat transcripts.
+- Evaluate native GitHub features or APIs for supporting persistent LLM memory and handoff.
+- Minimize dependencies—prefer solutions that work with only GitHub and Copilot.
 
 ---
 
